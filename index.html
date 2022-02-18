@@ -10,14 +10,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script defer src="fontawesome/js/all.js"></script>
-    <title>John Doe</title>
+    <title>Somi Kim</title>
     <style>
         html,
         body {
             height: 100%;
-            font-family: 'Merriweather Sans', sans-serif;
+            color: #333333;
+            /*font-family: 'Merriweather Sans', sans-serif*/ 
+            font-family: 'Montserrat','Noto Sans','Malgun Gothic', sans-serif;
             scroll-behavior: smooth;
         }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0) /*rgb(168, 161, 154, 0.4)*/;
+            color: #333333;
+        }
+
+        a {
+            color: #333333;
+        }
+
 
         .faded {
             opacity: 0.8
@@ -81,114 +92,129 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#landing">John Doe<span class="sr-only">(current)</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div>
+        <nav class="navbar navbar-expand-lg fixed-top justify-content-between">
+            <a class="navbar-brand" href="#landing"><img class="mr-3" src="images/tLogo.png" width="32" height="35">Somi Kim<span class="sr-only"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#courses">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="landing">
         <div class="row mx-auto">
-            <h4 class="display-4 font-weight-bold mx-auto text-center">Hello, I'm John!</h4>
+            <h4 class="display-4 font-weight-bold mx-auto text-center">Hello, I'm Somi!</h4>
         </div>
+        <br /><br />
         <div class="row mx-auto">
-            <h5 class="display-5 mx-auto faded text-center">I'm an Information Science & Technology Student at Temple
-                University.</h5>
+            <p class="display-5 mx-auto faded text-center lh-lg">
+                I'm an Information Science & Technology Student at Temple University. <br />
+                Not only that, but I also majored in Biology. So I am a mighty double major. <br />
+                If you wonder what a Biology major can do in the tech world, try me <span>&#x1F609</span>
+            </p>
         </div>
-        <div class="row my-4">
-            <div class="col my-3"><img src="images/python.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Python" /></div>
-            <div class="col my-3"><img src="images/angular.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Angular" /></div>
-            <div class="col my-3"><img src="images/typescript.jpg" class="lang" data-toggle="tooltip"
-                    data-placement="top" title="TypeScript" /></div>
+        <br /><br />
+        <button class="btn btn-outline" type="button" data-toggle="collapse" data-target="#skills" aria-expanded="false" aria-controls="skills">
+            Expand on My Skills
+        </button>
 
-            <div class="col my-3"><img src="images/csharp.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="C#" /></div>
-            <div class="col my-3"><img src="images/node.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Node.js" /></div>
-            <div class="col my-3"><img src="images/java.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Java" /></div>
-
-            <div class="col my-3"><img src="images/aspnet.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="ASP.NET" /></div>           
-                     <div class="col my-3"><img src="images/mssql.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="Microsoft SQL Server" /></div> <div class="col my-3"><img src="images/mongodb.jpg" class="lang" data-toggle="tooltip" data-placement="top"
-                    title="MongoDB" /></div>
-
-        </div>
-        <div class="row my-4">
-            <div class="col">
-                <a href="#projects"><button type="button" class="btn btn-outline">Projects</button></a>
+        <div class="collapse row my-4" id="skills">
+            <div class="col my-3">
+                <img src="images/python.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Python" />
             </div>
-            <div class="col">
-                <a href="#courses"><button type="button" class="btn btn-outline">Courses</button></a>
+            <div class="col my-3">
+                <img src="images/javascript.png" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="JavaScript" />
             </div>
-            <div class="col">
-                <a href="#contact"><button type="button" class="btn btn-outline">Contact</button></a>
+            <div class="col my-3">
+                <img src="images/csharp.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="C#" />
+            </div>
+            <div class="col my-3">
+                <img src="images/java.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="Java" />
+            </div>
+            <div class="col my-3">
+                <img src="images/aspnet.jpg" class="lang" data-toggle="tooltip" data-placement="top"
+                     title="ASP.NET" />
             </div>
         </div>
+        <!--
+    <div class="row my-4">
+        <div class="col">
+            <a href="#projects"><button type="button" class="btn btn-outline">Projects</button></a>
+        </div>
+        <div class="col">
+            <a href="#courses"><button type="button" class="btn btn-outline">Courses</button></a>
+        </div>
+        <div class="col">
+            <a href="#resume"><button type="button" class="btn btn-outline">Resume</button></a>
+        </div>
+        <div class="col">
+            <a href="#contact"><button type="button" class="btn btn-outline">Contact</button></a>
+        </div>
+    </div>
+    -->
         <div class="row mt-5 next">
-            <a href="#projects" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Projects"></i></a> </div>
+            <a href="#projects" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Projects"></i>
+            </a>
+        </div>
 
     </div>
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="projects">
         <div class="row mx-auto">
-            <h4 class="display-4 font-weight-bold mx-auto text-center">Projects</h4>
+            <h4 class="display-4 font-weight-bold mx-auto text-center">School Projects</h4>
         </div>
         <div class="row mx-auto">
             <h5 class="display-5 mx-auto faded text-center mb-4">I've worked on some neat things.</h5>
         </div>
         <div class="row w-100">
-            <h5>Inspiro for Esperanza</h5>
+            <h5><a href="http://cis-linux2.temple.edu:8080/fa21_3344_tuf88411/index.html#/home">Building a Website</a></h5>
         </div>
         <div class="row w-100 mb-4">
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nisi
-                in neque blandit auctor. Vestibulum pellentesque fringilla nulla quis sagittis. Donec id erat
-                sodales, fringilla est non, vestibulum tellus. Suspendisse potenti. Fusce et dolor blandit,
-                tincidunt eros non, pharetra orci. Donec massa neque, suscipit at purus ac, cursus tincidunt
-                purus. Suspendisse imperdiet massa nec sem dictum luctus. Vestibulum at porta lectus, sed
-                faucibus libero. </p>
+            <p class="text-justify">
+                I worked on building this website for Client Side Scripting for the Web course.
+                This project focused on the basics of client side coding (HTML, CSS, AJAX/JSON, JavaScript, React).
+                You can see various part of techniques implemented in this website as you navigate through the navbar.
+            </p>
         </div>
         <div class="row w-100">
-            <h5>Work From Home Pinterest</h5>
+            <h5><a href="http://cis-iis2.temple.edu/Spring2022/CIS3342_tuf88411/Project1/">Pizza Order Form</a></h5>
         </div>
         <div class="row w-100 mb-4">
-            <p class="text-justify">Vestibulum vulputate ullamcorper placerat. Fusce bibendum ligula non ex dapibus
-                finibus. Nulla facilisi. Integer eu libero lorem. Pellentesque eget pretium ligula. Donec finibus nibh
-                sed leo dapibus imperdiet. Fusce cursus eu mi sed porttitor. Aliquam eget suscipit dolor, ac mollis
-                risus. Vestibulum commodo turpis nulla, bibendum varius urna dictum porta. </p>
+            <p class="text-justify">
+                I worked on this project for Server-Side Web Application Development course.
+                Through this project, I got some experience creating a web application that includes a simpel HTML page
+                with a form that is processed by an ASPX sever-side page.
+            </p>
         </div>
-        <div class="row w-100">
-            <h5>Query Dating Site</h5>
-        </div>
-        <div class="row w-100">
-            <p class="text-justify">Fusce egestas lectus ac est porttitor congue. Mauris lacinia pharetra odio ut
-                egestas. Nullam facilisis condimentum consequat. Integer arcu nibh, ullamcorper non fringilla quis,
-                tempus sit amet turpis. Proin ac gravida mi. Ut eros quam, pharetra venenatis pharetra at, porttitor sit
-                amet dolor. Ut et accumsan metus. Phasellus eros diam, tristique a maximus vel, fringilla eu nisl.
-                Pellentesque sed quam non urna dapibus porta in in nibh. Phasellus lobortis nibh est, id pretium orci
-                efficitur at. </p>
-        </div>
+
         <div class="row mt-5 next">
-            <a href="#courses" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Courses"></i></a> </div>
+            <a href="#courses" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Courses"></i>
+            </a>
+        </div>
     </div>
     <div class="container landing d-flex justify-content-center flex-column align-items-center" id="courses">
         <div class="row mx-auto">
@@ -222,45 +248,76 @@
             </div>
         </div>
         <div class="row mt-5 next">
-            <a href="#contact" class="col"><i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
-                    title="Contact"></i></a> </div>
+            <a href="#resume" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Resume"></i>
+            </a>
+        </div>
     </div>
-    <div class="container landing d-flex justify-content-center flex-column align-items-center" id="contact">
-        <div class="row mx-auto">
-            <h4 class="display-4 font-weight-bold mx-auto text-center">Feel Like Reaching Out?</h4>
-        </div>
-        <div class="row mx-auto">
-            <h5 class="display-5 mx-auto faded text-center">I don't bite.</h5>
-        </div>
-        <div class="row my-4 contacticon">
-            <a href="mailto:johndoe@gmail.com" class="col mx-3"><i class="fas fa-envelope-square"
-                    data-toggle="tooltip" data-placement="top" title="Email"></i></a>
-            <a href="https://www.linkedin.com/in/johndoe/" class="col mx-3"><i class="fab fa-linkedin"
-                    data-toggle="tooltip" data-placement="top" title="LinkedIn"></i></a>
-            <a href="https://github.com/johndoe" class="col mx-3"><i class="fab fa-github-square"
-                    data-toggle="tooltip" data-placement="top" title="Github"></i></a>
 
+    <div class="container landing d-flex justify-content-center flex-column align-items-center" id="resume">
+        <div class="row mx-auto">
+            <h4 class="display-4 font-weight-bold mx-auto text-center">Resume</h4>
         </div>
-        <div class="row mt-5">
-            <a href="#landing"><button type="button" class="btn btn-outline">Return to Top</button></a>
+        <br />
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/profilePic.jfif" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><br />If you would like to take a look at my resume, click the button below.</p><br />
+                <a href="SomiKim_Resume.pdf" class="btn btn-outline">Click Here to View</a>
+            </div>
+        </div>
+        <div class="row mt-5 next">
+            <a href="#contact" class="col">
+                <i class="fas fa-arrow-down" data-toggle="tooltip" data-placement="top"
+                   title="Contact"></i>
+            </a>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
+
+
+        <div class="container landing d-flex justify-content-center flex-column align-items-center" id="contact">
+            <div class="row mx-auto">
+                <h4 class="display-4 font-weight-bold mx-auto text-center">Feel Like Reaching Out?</h4>
+            </div>
+            <div class="row mx-auto">
+                <h5 class="display-5 mx-auto faded text-center">I don't bite.</h5>
+            </div>
+            <div class="row my-4 contacticon">
+                <a href="mailto:somikim@temple.edu" class="col mx-3">
+                    <i class="fas fa-envelope-square"
+                       data-toggle="tooltip" data-placement="top" title="Email"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/somikim/" class="col mx-3">
+                    <i class="fab fa-linkedin"
+                       data-toggle="tooltip" data-placement="top" title="LinkedIn"></i>
+                </a>
+                <a href="https://github.com/sssoms" class="col mx-3">
+                    <i class="fab fa-github-square"
+                       data-toggle="tooltip" data-placement="top" title="Github"></i>
+                </a>
+
+            </div>
+            <div class="row mt-5">
+                <a href="#landing"><button type="button" class="btn btn-outline">Return to Top</button></a>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
 </body>
 
 </html>
